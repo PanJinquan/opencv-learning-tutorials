@@ -10,20 +10,41 @@ using namespace cv;
 using namespace cv::dnn;
 
 float confidenceThreshold = 0.25;
-string pro_dir = "E:/opencv_dnn/opencv_tutorial/"; //项目根目录
+string pro_dir = "E:/opencv-learning-tutorials/"; //项目根目录
 
-void video_detection();
-void image_detection();
+/** 
+*  @brief YOLO模型视频测试.
+*  @param cfgFile path to the .cfg file with text description of the network architecture.
+*  @param weight  path to the .weights file with learned network.
+*  @param clsNames  种类标签文件
+*  @param video_path  视频文件
+*  @returns void
+*/
+void video_detection(string cfgFile, string weight, string clsNames, string video_path);
+/**
+*  @brief YOLO模型图像测试.
+*  @param cfgFile path to the .cfg file with text description of the network architecture.
+*  @param weight  path to the .weights file with learned network.
+*  @param clsNames  种类标签文件
+*  @param image_path  图像文件
+*  @returns void
+*/
+void image_detection(string cfgFile, string weight, string clsNames, string image_path);
+
 int main(int argc, char** argv)
 {
-	//image_detection();//图片测试
-	video_detection();//视频测试
+	String cfgFile = pro_dir + "data/models/yolov2-tiny-voc/yolov2-tiny-voc.cfg";
+	String weight = pro_dir + "data/models/yolov2-tiny-voc/yolov2-tiny-voc.weights";
+	string clsNames = pro_dir + "data/models/yolov2-tiny-voc/voc.names";
+	string image_path = pro_dir + "data/images/1.jpg";
+	image_detection(cfgFile, weight, clsNames, image_path);//图片测试
+	string video_path = pro_dir + "data/images/lane.avi";
+	video_detection(cfgFile, weight, clsNames,video_path);//视频测试
 }
 
-void video_detection() {
-	String modelConfiguration = pro_dir + "data/models/yolov2-tiny-voc/yolov2-tiny-voc.cfg";
-	String modelBinary = pro_dir + "data/models/yolov2-tiny-voc/yolov2-tiny-voc.weights";
-	dnn::Net net = readNetFromDarknet(modelConfiguration, modelBinary);
+void video_detection(string cfgFile, string weight,string clsNames, string video_path) {
+
+	dnn::Net net = readNetFromDarknet(cfgFile, weight);
 	if (net.empty())
 	{
 		printf("Could not load net...\n");
@@ -31,7 +52,6 @@ void video_detection() {
 	}
 
 	vector<string> classNamesVec;
-	string clsNames = pro_dir + "data/models/yolov2-tiny-voc/voc.names";
 	ifstream classNamesFile(clsNames);
 	if (classNamesFile.is_open())
 	{
@@ -42,8 +62,7 @@ void video_detection() {
 
 	// VideoCapture capture(0); 
 	VideoCapture capture;
-	string video_file = pro_dir+"data/images/lane.avi";
-	capture.open(video_file);
+	capture.open(video_path);
 	if (!capture.isOpened()) {
 		printf("could not open the camera...\n");
 		return;
@@ -107,11 +126,9 @@ void video_detection() {
 	}
 }
 
-void image_detection() {
+void image_detection(string cfgFile, string weight, string clsNames, string image_path) {
 	// 加载网络模型
-	String modelConfiguration = pro_dir+"data/models/yolov2-tiny-voc/yolov2-tiny-voc.cfg";
-	String modelBinary = pro_dir+"data/models/yolov2-tiny-voc/yolov2-tiny-voc.weights";
-	dnn::Net net = readNetFromDarknet(modelConfiguration, modelBinary);
+	dnn::Net net = readNetFromDarknet(cfgFile, weight);
 	if (net.empty())
 	{
 		printf("Could not load net...\n");
@@ -119,7 +136,6 @@ void image_detection() {
 	}
 	// 加载分类信息
 	vector<string> classNamesVec;
-	string clsNames = pro_dir + "data/models/yolov2-tiny-voc/voc.names";
 	ifstream classNamesFile(clsNames);
 	if (classNamesFile.is_open())
 	{
@@ -129,7 +145,6 @@ void image_detection() {
 	}
 
 	// 加载图像
-	string image_path = pro_dir + "data/images/dog.jpg";
 	Mat frame = imread(image_path);
 	Mat inputBlob = blobFromImage(frame, 1 / 255.F, Size(416, 416), Scalar(), true, false);
 	net.setInput(inputBlob, "data");
