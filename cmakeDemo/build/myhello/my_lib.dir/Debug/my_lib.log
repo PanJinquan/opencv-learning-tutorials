@@ -1,4 +1,0 @@
-﻿  Building Custom Rule D:/OpencvTest/cmakeDemo/cmakeDemo2/myhello/CMakeLists.txt
-  CMake does not need to re-run because D:/OpencvTest/cmakeDemo/cmakeDemo2/build/myhello/CMakeFiles/generate.stamp is up-to-date.
-  myhello.cpp
-  my_lib.vcxproj -> D:\OpencvTest\cmakeDemo\cmakeDemo2\lib\Debug\my_lib.lib

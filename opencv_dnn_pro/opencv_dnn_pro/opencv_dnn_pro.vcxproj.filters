@@ -18,7 +18,7 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\dnn_tutorial\yolov3_demo.cpp">
+    <ClCompile Include="..\..\dnn_tutorial\object_detection_yolov3_image.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

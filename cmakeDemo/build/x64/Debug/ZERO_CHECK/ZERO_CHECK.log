@@ -1,8 +1,0 @@
-﻿  Checking Build System
-  CMake is re-running because D:/OpencvTest/cmakeDemo/cmakeDemo2/build/CMakeFiles/generate.stamp is out-of-date.
-    the file 'D:/OpencvTest/cmakeDemo/cmakeDemo2/CMakeLists.txt'
-    is newer than 'D:/OpencvTest/cmakeDemo/cmakeDemo2/build/CMakeFiles/generate.stamp.depend'
-    result='-1'
-  -- Configuring done
-  -- Generating done
-  -- Build files have been written to: D:/OpencvTest/cmakeDemo/cmakeDemo2/build

@@ -1,4 +1,0 @@
-﻿  Building Custom Rule D:/OpencvTest/cmakeDemo/cmakeDemo2/CMakeLists.txt
-  CMake does not need to re-run because D:/OpencvTest/cmakeDemo/cmakeDemo2/build/CMakeFiles/generate.stamp is up-to-date.
-  main.cpp
-  Demo.vcxproj -> D:\OpencvTest\cmakeDemo\cmakeDemo2\bin\Debug\Demo.exe
