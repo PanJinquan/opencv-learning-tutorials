@@ -1,0 +1,6 @@
+classes= 20
+train  = /home/ubuntu/project/darknet_pro/2007_train.txt
+valid  = /home/ubuntu/project/darknet_pro/2007_val.txt
+names =  my_voc/voc.names
+backup = backup
+

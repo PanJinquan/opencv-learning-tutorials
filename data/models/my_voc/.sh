@@ -1,0 +1,1 @@
+./darknet detector train my_yolo/my.data my_yolo/my.cfg

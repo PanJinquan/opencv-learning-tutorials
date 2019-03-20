@@ -157,7 +157,7 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\dnn_tutorial\object_detection_yolov3_image.cpp" />
+    <ClCompile Include="..\..\dnn_tutorial\object_detection_yolov3_my_voc.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

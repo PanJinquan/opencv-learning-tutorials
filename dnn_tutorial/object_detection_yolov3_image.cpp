@@ -59,7 +59,7 @@ void detect_image(string image_path, string modelWeights, string modelConfigurat
 	while (getline(ifs, line)) classes.push_back(line);
 
 	// Load the network
-	Net net = readNetFromDarknet(modelConfiguration, modelWeights);
+Net net = readNetFromDarknet(modelConfiguration, modelWeights);
 	net.setPreferableBackend(DNN_BACKEND_OPENCV);
 	net.setPreferableTarget(DNN_TARGET_OPENCL);
 

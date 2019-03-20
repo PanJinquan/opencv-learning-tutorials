@@ -1,0 +1,29 @@
+[33mcommit 6c9b26a1aeea8cc11f19514a204f2f815df82f28[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: panjq1 <panjq1@lenovocom>
+Date:   Wed Mar 20 11:04:09 2019 +0800
+
+    add voc_model
+
+[33mcommit 8ae1414433cb78534396daafff7026361c8780d3[m[33m ([m[1;31morigin/master[m[33m)[m
+Author: panjq1 <panjq1@lenovocom>
+Date:   Thu Nov 15 09:50:28 2018 +0800
+
+    ADD YOLO v3 models
+
+[33mcommit e1502d0a7e26051fb1eed6f1f1df74d8abea0a6b[m
+Author: panjq1 <panjq1@lenovocom>
+Date:   Wed Nov 14 18:32:00 2018 +0800
+
+    ADD:cmakeDemo
+
+[33mcommit 4463a411f583b4f291465024b1dc5b63d0ff5b56[m
+Author: panjq1 <panjq1@lenovocom>
+Date:   Wed Oct 10 10:11:26 2018 +0800
+
+    MODIFY
+
+[33mcommit b65d53b9343790eb45c2b7c65440d4baeb316120[m
+Author: panjq1 <panjq1@lenovocom>
+Date:   Tue Oct 9 09:43:35 2018 +0800
+
+    ADD
