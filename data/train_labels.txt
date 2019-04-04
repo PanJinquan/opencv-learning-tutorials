@@ -1,0 +1,9 @@
+A1.jpg 0
+A2.jpg 0
+A3.jpg 0
+B1.jpg 1
+B2.jpg 1
+B3.jpg 1
+C1.jpg 2
+C2.jpg 2
+C3.jpg 2
