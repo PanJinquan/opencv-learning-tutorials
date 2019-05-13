@@ -5,7 +5,8 @@ cmake_minimum_required(VERSION 3.5)
 # https://blog.csdn.net/weicao1990/article/details/72844995
 
 project(CMakeDemo)
-SET(OpenCV_DIR	D:/opencv/build)# WIN
+SET( CMAKE_CXX_FLAGS "-std=c++11 -O3")
+#SET(OpenCV_DIR	D:/my_opencv/opencv/build)# WIN
 find_package( OpenCV 3.4.5 REQUIRED )
 
 # 指定头文件目录
