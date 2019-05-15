@@ -4,10 +4,11 @@
 #include "myhello.h"
 
 using namespace std;
-void main() {
-	string path = "E:/SSGF/dataset/images/geda.png";
+int main() {
+	string path = "../1.jpg";
 	cv::Mat image = cv::imread(path);
 	PrintHelloWorld();
 	DEBUG_IMSHOW("image", image);
 	cv::waitKey(0);
+	return 0;
 }

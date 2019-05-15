@@ -1,6 +1,6 @@
 #include "opencv2/opencv.hpp"
 using namespace std;
-#include "debug.h"
+#include "Debug.h"
 
 
 //*************************************œ‘ æÕº∆¨****************************************
